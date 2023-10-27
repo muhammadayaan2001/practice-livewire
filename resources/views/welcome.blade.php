@@ -26,6 +26,10 @@
         @livewire('liveware-actions')
     </div>
 
+    <div class="livewire-lifecycle-Hook">
+        @livewire('liveware-life-cycle-hook')
+    </div>
+
     @livewireScripts
 
 </body>
