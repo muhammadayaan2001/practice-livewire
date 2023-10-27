@@ -18,8 +18,12 @@
     @livewire('profile')
 
 
-    <div>
+    <div class="property-binding">
         @livewire('property-binding')
+    </div>
+
+    <div class="livewire-actions">
+        @livewire('liveware-actions')
     </div>
 
     @livewireScripts
