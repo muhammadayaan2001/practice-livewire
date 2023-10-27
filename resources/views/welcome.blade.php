@@ -30,6 +30,11 @@
         @livewire('liveware-life-cycle-hook')
     </div>
 
+    <br>
+    <div class="nestedcomponet">
+        <h1><a href="{{ url('nested-component') }}">Nested Component</a></h1>
+    </div>
+
     @livewireScripts
 
 </body>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\LivewireRoute;
+use App\Livewire\NestedComponent\Users;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,6 @@ Route::view('/data-sharing', 'data-share');
 //Livewire Route
 // Route::livewire('livewire-route', 'LivewireRoute'); //  Livewire V2/V3. In this version, Route::livewire()has been removed.
 Route::get('/livewire-route', [LivewireRoute::class, 'name']);
+
+// Route::get('/nested-component', [Users::class, 'name']);
+Route::view('/nested-component', 'nested-component');
