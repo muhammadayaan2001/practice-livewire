@@ -18,6 +18,10 @@
     @livewire('profile')
 
 
+    <div>
+        @livewire('property-binding')
+    </div>
+
     @livewireScripts
 
 </body>
