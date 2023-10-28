@@ -1,23 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>User Search</title>
-    @livewireStyles
-</head>
-<body>
-    
+@extends('layouts.app')
+
+@section('title', 'Search Box Component')
+
+
+@section('content')
+
+<div class="container-fluid">
     <h4>Render 1</h4>
     @livewire('searchbox')
     <h4>Render 2</h4>
     @livewire('searchbox')
 
-    @livewire('profile')
-    
+    <div class="mt-5">
+        {{-- Inline componet rendering --}}
+        @livewire('profile')
+    </div>
+</div>
 
-    @livewireScripts
-
-</body>
-</html>
+@endsection

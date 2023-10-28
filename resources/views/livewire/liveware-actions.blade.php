@@ -4,10 +4,10 @@
     <h1>Livewire Actions:</h1>
 
     <h3>{{ $msg }}</h3>
-    <button wire:click="updateMsg">Update Message</button>
+    <button class="btn btn-primary" wire:click="updateMsg">Onclick Message Update</button>
 
     <h3>{{ $username }}</h3>
-    <button wire:mouseover="updateName('Ayaan 123')">Update Name</button>
+    <button class="btn btn-primary" wire:mouseover="updateName('Ayaan 123')">Mouseover Name Update</button>
 
 
 </div>
