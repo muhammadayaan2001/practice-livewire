@@ -35,6 +35,11 @@
         <h1><a href="{{ url('nested-component') }}">Nested Component</a></h1>
     </div>
 
+    <br>
+    <div class="userregistration">
+        <h1><a href="{{ url('register-component') }}">User Register Form</a></h1>
+    </div>
+
     @livewireScripts
 
 </body>

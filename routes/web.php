@@ -29,3 +29,5 @@ Route::get('/livewire-route', [LivewireRoute::class, 'name']);
 
 // Route::get('/nested-component', [Users::class, 'name']);
 Route::view('/nested-component', 'nested-component');
+
+Route::view('/register-component', 'user-form');
