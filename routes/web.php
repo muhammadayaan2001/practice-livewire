@@ -34,3 +34,4 @@ Route::view('/lifecycle-hook', 'lifecycle-component');
 Route::view('/register-component', 'user-form');
 Route::view('/property-binding', 'property-bind');
 Route::view('/livewire-actions', 'action-component');
+Route::view('/submit-form', 'user-form');

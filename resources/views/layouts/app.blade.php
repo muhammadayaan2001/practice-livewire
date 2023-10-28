@@ -18,15 +18,15 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
-              <a class="nav-link" href="{{ url('/search') }}">Rendering-input</a>
-              <a class="nav-link" href="{{ url('/property-binding') }}">Property-Binding</a>
-              <a class="nav-link" href="{{ url('/livewire-actions') }}">Livewire-Actions</a>
-              <a class="nav-link" href="{{ url('/lifecycle-hook') }}">Lifecyle-Hooks</a>
-              <a class="nav-link" href="{{ url('/nested-component') }}">Nested-Component</a>
-              <a class="nav-link" href="{{ url('/submit-form') }}">Submit-Form</a>
-              <a class="nav-link" href="{{ url('/livewire-route') }}">Routes</a>
-              <a class="nav-link" href="{{ url('/data-sharing') }}">Data-Share</a>
+              <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="{{ url('/') }}">Home</a>
+              <a class="nav-link {{ Request::is('search') ? 'active' : '' }}" href="{{ url('/search') }}">Rendering-input</a>
+              <a class="nav-link {{ Request::is('property-binding') ? 'active' : '' }}" href="{{ url('/property-binding') }}">Property-Binding</a>
+              <a class="nav-link {{ Request::is('livewire-actions') ? 'active' : '' }}" href="{{ url('/livewire-actions') }}">Livewire-Actions</a>
+              <a class="nav-link {{ Request::is('lifecycle-hook') ? 'active' : '' }}" href="{{ url('/lifecycle-hook') }}">Lifecyle-Hooks</a>
+              <a class="nav-link {{ Request::is('nested-component') ? 'active' : '' }}" href="{{ url('/nested-component') }}">Nested-Component</a>
+              <a class="nav-link {{ Request::is('submit-form') ? 'active' : '' }}" href="{{ url('/submit-form') }}">Submit-Form</a>
+              <a class="nav-link {{ Request::is('livewire-route') ? 'active' : '' }}" href="{{ url('/livewire-route') }}">Routes</a>
+              <a class="nav-link {{ Request::is('data-sharing') ? 'active' : '' }}" href="{{ url('/data-sharing') }}">Data-Share</a>
             </div>
           </div>
         </div>

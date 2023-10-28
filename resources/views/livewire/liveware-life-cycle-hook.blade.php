@@ -6,9 +6,10 @@
     <div>
         <h3>{{ $name }}</h3>
         <h3>Counter: {{ $counter }}</h3>
-        <button wire:click="updateName('Hello Ayaan')">Update Name</button>
+        <button class="btn btn-warning" wire:click="updateName('Hello Ayaan')">Update Name</button>
     </div>
     <br>
-    <input type="text" wire:model.live="name" >
-
+    <div class="col-md-6 mb-4">
+        <input type="text" class="form-control" wire:model.live="name">
+    </div>
 </div>

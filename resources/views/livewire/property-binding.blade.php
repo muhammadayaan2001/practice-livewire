@@ -5,5 +5,5 @@
         {{ $message }}
     </span>
     <br>
-    <input type="text" wire:model.live="message">
+    <input type="text" class="form-control mt-3" wire:model.live="message">
 </div>
