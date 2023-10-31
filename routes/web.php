@@ -35,3 +35,6 @@ Route::view('/register-component', 'user-form');
 Route::view('/property-binding', 'property-bind');
 Route::view('/livewire-actions', 'action-component');
 Route::view('/submit-form', 'user-form');
+
+//Emp CRUD Route
+Route::view('/employee-crud', 'employee-crud.index');

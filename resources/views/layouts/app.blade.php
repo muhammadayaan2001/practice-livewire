@@ -27,6 +27,16 @@
               <a class="nav-link {{ Request::is('submit-form') ? 'active' : '' }}" href="{{ url('/submit-form') }}">Submit-Form</a>
               <a class="nav-link {{ Request::is('livewire-route') ? 'active' : '' }}" href="{{ url('/livewire-route') }}">Routes</a>
               <a class="nav-link {{ Request::is('data-sharing') ? 'active' : '' }}" href="{{ url('/data-sharing') }}">Data-Share</a>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Others
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="{{ url('/employee-crud') }}">CRUD Livewire</a></li>
+                </ul>
+              </li>
+
             </div>
           </div>
         </div>
