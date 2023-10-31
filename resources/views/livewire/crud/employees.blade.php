@@ -63,7 +63,9 @@
                             </tr>
                         @endforeach
                     </tbody>
+                    	
                 </table>
+                {{ $allEmployees->links('pagination::bootstrap-5') }}
             </div>
         </div>
     </div>

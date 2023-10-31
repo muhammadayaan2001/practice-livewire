@@ -4,18 +4,20 @@ namespace App\Livewire\Crud;
 
 use App\Models\Employee;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Employees extends Component
 {
-    public $allEmployees;
+    use WithPagination;
+    // public $allEmployees;
 
     public $first_name, $last_name, $email, $age, $salary, $phone, $job_title, $address, $gender, $genders, $employee_id;
     public $updateMode = false;
 
     public function render()
     {
-        $this->allEmployees = Employee::all();
-        return view('livewire.crud.employees');
+        $allEmployees = Employee::paginate(2);
+        return view('livewire.crud.employees', compact('allEmployees'));
     }
 
     private function resetInputFields(){
