@@ -5,6 +5,7 @@
 
 @section('content')
     <div class="employee-crud">
+        {{-- @livewire('crud.image-uploading') --}}
         @livewire('crud.employees')
     </div>
 

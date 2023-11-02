@@ -10,6 +10,9 @@
 
         <div class="jumbotron text-center mb-5">
               <h1 class="display-4">Employee CRUD</h1>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Upload Image
+            </button>
           </div>
 
         <div class="row">
@@ -33,40 +36,52 @@
                         <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
-                <h3>Employee List</h3>
-                <table class="table table-success table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">First Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Title</th>
-                            <th scope="col">Gender</th>
-                            <th scope="col">Options</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if ($allEmployees->isEmpty())
-                            <td>No employee register</td>
-                        @endif
-                        @foreach ($allEmployees as $employee)
-                            <tr>
-                                <td>{{ $employee->first_name }}</td>
-                                <td>{{ $employee->last_name }}</td>
-                                <td>{{ $employee->job_title }}</td>
-                                <td>{{ $employee->gender == 'male' ? 'M' : 'F' }}</td>
-                                <td>
-                                    <button wire:click="edit({{ $employee->id }})"
-                                        class="btn btn-primary btn-sm">Edit</button>
-                                    <button wire:click="delete({{ $employee->id }})"
-                                        class="btn btn-danger btn-sm">Delete</button>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                    	
-                </table>
-                {{ $allEmployees->links('pagination::bootstrap-5') }}
+
+                    <div class="row">
+                        {{-- Employee list --}}
+                        <div class="col-md-12">
+                            <h3>Employee List</h3>
+                            <table class="table table-success table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Gender</th>
+                                        <th scope="col">Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if ($allEmployees->isEmpty())
+                                        <td>No employee register</td>
+                                    @endif
+                                    @foreach ($allEmployees as $employee)
+                                        <tr>
+                                            <td>{{ $employee->first_name }}</td>
+                                            <td>{{ $employee->last_name }}</td>
+                                            <td>{{ $employee->job_title }}</td>
+                                            <td>{{ $employee->gender == 'male' ? 'M' : 'F' }}</td>
+                                            <td>
+                                                <button wire:click="edit({{ $employee->id }})"
+                                                    class="btn btn-primary btn-sm">Edit</button>
+                                                <button wire:click="delete({{ $employee->id }})"
+                                                    class="btn btn-danger btn-sm">Delete</button>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                                    
+                            </table>
+                            {{ $allEmployees->appends(['images' => $images->currentPage()])->links('pagination::bootstrap-5') }}
+                        </div>
+                        {{-- Employee Images List --}}
+                        <div class="col-md-12">
+                            @livewire('crud.image-uploading')
+                        </div>
+                    </div>
+
             </div>
+            {{-- @include('livewire.crud.employee-images') --}}
         </div>
     </div>
 </div>

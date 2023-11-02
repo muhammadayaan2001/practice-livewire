@@ -3,6 +3,7 @@
 namespace App\Livewire\Crud;
 
 use App\Models\Employee;
+use App\Models\ImageUpload;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -16,8 +17,10 @@ class Employees extends Component
 
     public function render()
     {
-        $allEmployees = Employee::paginate(2);
-        return view('livewire.crud.employees', compact('allEmployees'));
+        $images = ImageUpload::paginate(2, ['*'], 'images');
+
+        $allEmployees = Employee::paginate(2, ['*'], 'allEmployees');
+        return view('livewire.crud.employees', compact('allEmployees', 'images'));
     }
 
     private function resetInputFields(){
